@@ -19,6 +19,7 @@ import javax.xml.ws.ServiceMode;
 import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.WebServiceProvider;
 import javax.xml.ws.soap.SOAPBinding;
+import org.apache.cxf.interceptor.OutInterceptors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,9 @@ import org.slf4j.LoggerFactory;
 @WebServiceProvider(wsdlLocation = "FaultService.wsdl")
 @ServiceMode(Mode.MESSAGE)
 @BindingType(SOAPBinding.SOAP11HTTP_BINDING)
+@OutInterceptors(interceptors = {
+		"com.github.igarashitm.issues.soap.signencrypt.SOAPFaultInterceptor"
+		})
 public class FaultService implements Provider<SOAPMessage> {
 
     private final Logger _logger = LoggerFactory.getLogger(FaultService.class.getSimpleName());

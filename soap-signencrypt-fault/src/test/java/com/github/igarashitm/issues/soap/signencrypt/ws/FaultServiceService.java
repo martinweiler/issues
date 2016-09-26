@@ -15,7 +15,7 @@ import javax.xml.ws.Service;
  * 
  */
 @WebServiceClient(name = "FaultServiceService", 
-                  wsdlLocation = "http://127.0.0.1:8080/soap-signencrypt-fault-2.1.0-SNAPSHOT/FaultService?wsdl",
+                  wsdlLocation = "http://127.0.0.1:8080/soap-signencrypt-fault-2.0.1.redhat-621117/FaultService?wsdl",
                   targetNamespace = "http://signencrypt.soap.issues.igarashitm.github.com/") 
 public class FaultServiceService extends Service {
 
@@ -26,11 +26,11 @@ public class FaultServiceService extends Service {
     static {
         URL url = null;
         try {
-            url = new URL("http://127.0.0.1:8080/soap-signencrypt-fault-2.1.0-SNAPSHOT/FaultService?wsdl");
+            url = new URL("http://127.0.0.1:8080/soap-signencrypt-fault-2.0.1.redhat-621117/FaultService?wsdl");
         } catch (MalformedURLException e) {
             java.util.logging.Logger.getLogger(FaultServiceService.class.getName())
                 .log(java.util.logging.Level.INFO, 
-                     "Can not initialize the default wsdl from {0}", "http://127.0.0.1:8080/soap-signencrypt-fault-2.1.0-SNAPSHOT/FaultService?wsdl");
+                     "Can not initialize the default wsdl from {0}", "http://127.0.0.1:8080/soap-signencrypt-fault-2.0.1.redhat-621117/FaultService?wsdl");
         }
         WSDL_LOCATION = url;
     }

@@ -93,7 +93,7 @@
 
   <wsdl:service name="FaultServiceService">
     <wsdl:port binding="tns:FaultServiceServiceSoapBinding" name="FaultServicePort">
-      <soap:address location="http://localhost:8080/soap-signencrypt-fault-2.1.0-SNAPSHOT/FaultService"/>
+      <soap:address location="http://localhost:8080/soap-signencrypt-fault-2.0.1.redhat-621117/FaultService"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
